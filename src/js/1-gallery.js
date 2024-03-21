@@ -88,13 +88,15 @@ function createMarkup(arr) {
 } 
 
 // примінити бібліотеку SimpleLightbox з властивостями:
-const lightbox = new SimpleLightbox('.gallery a', {
-    swipeClose: false, 
+const lightbox = new SimpleLightbox('.gallery a', { 
     captionPosition: 'bottom', 
-    captionsData: 'alt'
+    captionsData: 'alt',
+    captionsDelay: 250
 });
 
 //sourceAttr - атрибут, який використовується для великих зображень
 //swipeClose: проведіть пальцем вгору або вниз, щоб закрити галерею (false/true)
 //captionPosition: - положення підпису. 
 //captionsData:  - назва картинки під фото
+//captionsDelay: 250 - підпис буде знизу і з'являється 
+//    через 250 мілісекунд після відкриття модального вікна
