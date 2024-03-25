@@ -4,7 +4,7 @@
 //     який буде зберігати значення полів у локальне сховище,
 //     коли користувач щось друкує.
 
-const LOCAL_KEY = "feedback-form-stage"; 
+const LOCAL_KEY = "feedback-form-state"; 
 const form = document.querySelector(".feedback-form"); 
 
 form.addEventListener("submit", handleSubmit);

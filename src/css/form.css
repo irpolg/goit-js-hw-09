@@ -58,11 +58,19 @@
     margin-right: 8px;
 }
 
-.form-email:hover {
+.form-email:hover, 
+.form-message:hover {
     border: 1px solid #000000;
 }
 
 .form-message {
     width: 360px;
     height: 80px;
+    border: 1px solid #808080;
 }
+
+.form-email:active,
+.form-message:active {
+    border: 1px solid #808080;
+}
+
