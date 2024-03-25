@@ -32,13 +32,19 @@ function onInputData(event) {
 
 //Отримуємо дані зі сховища. Якщо там щось було, то оновлюємо DOM 
 //значення зі сховища з'являються в полях на екрані форми
-function reload() {
-  let savedInput = localStorage.getItem(LOCAL_KEY);
+// function reload() {
+//   let savedInput = localStorage.getItem(LOCAL_KEY);
+//   if (savedInput) {
+//     savedInput = JSON.parse(savedInput);
+//     Object.entries(savedInput).forEach(([name, value]) => {
+//       form.elements[name].value = value ?? '';
+//     })
+//   }
+// }
+function reloadPage() {
   if (savedInput) {
-    savedInput = JSON.parse(savedInput);
-    Object.entries(savedInput).forEach(([name, value]) => {
-      form.elements[name].value = value ?? '';
-    })
+    email.value = savedInput.email || '';
+    message.value = savedInput.message || '';
   }
 }
 
