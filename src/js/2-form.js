@@ -23,7 +23,7 @@ reload();
 //     const emailText = event.target.value;
 //     localStorage.setItem(LOCAL_KEY, JSON.stringify(savedInput));
 // }
-function onInputData(event) {
+function onTextInput(event) {
   let savedInput = localStorage.getItem(LOCAL_KEY);
   savedInput = savedInput ? JSON.parse(savedInput) : {};
   savedInput[event.target.name] = event.target.value.trim();
@@ -41,7 +41,7 @@ function onInputData(event) {
 //     })
 //   }
 // }
-function reloadPage() {
+function reload() {
   if (savedInput) {
     email.value = savedInput.email || '';
     message.value = savedInput.message || '';
