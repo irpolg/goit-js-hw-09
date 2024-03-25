@@ -12,22 +12,16 @@ form.addEventListener("input", onTextInput);
 reload();
 
 //Отримуємо значення поля. Зберігаємо його в сховищі
-// function onTextInput(event) {
-//   let savedInput = localStorage.getItem(LOCAL_KEY);
-//   savedInput = savedInput ? JSON.parse(savedInput) : {};
-//   let { email, message } = form.elements;
-//   savedInput = {
-//     email: email.value.trim(),
-//     message: message.value.trim(),
-//   }
-//     const emailText = event.target.value;
-//     localStorage.setItem(LOCAL_KEY, JSON.stringify(savedInput));
-// }
 function onTextInput(event) {
   let savedInput = localStorage.getItem(LOCAL_KEY);
   savedInput = savedInput ? JSON.parse(savedInput) : {};
-  savedInput[event.target.name] = event.target.value.trim();
-  localStorage.setItem(LOCAL_KEY, JSON.stringify(savedInput));
+  let { email, message } = form.elements;
+  savedInput = {
+    email: email.value.trim(),
+    message: message.value.trim(),
+  }
+    const emailText = event.target.value;
+    localStorage.setItem(LOCAL_KEY, JSON.stringify(savedInput));
 }
 
 //Отримуємо дані зі сховища. Якщо там щось було, то оновлюємо DOM 
